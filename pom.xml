@@ -7,7 +7,7 @@
   <properties>
 		<!-- Fuerza el uso de compilación de una versión -->
 		<maven.compiler.target>11</maven.compiler.target>
-		<maven.complier.source>11</maven.complier.source>
+		<maven.compiler.source>11</maven.compiler.source>
 	  	<exec.mainClass>dad.gsonsample.GsonSample</exec.mainClass>
 	</properties>
 <dependencies>

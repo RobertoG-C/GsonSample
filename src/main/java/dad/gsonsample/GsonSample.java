@@ -12,15 +12,14 @@ public class GsonSample {
 		
 	
 	
-		String nombre=nuevaPalabra("nombre");
-		String apellido1=nuevaPalabra("primer apellido");
-		String apellido2=nuevaPalabra("segundo apellido");
+		String nombre=nuevaPalabra("Nombre");
+		String apellido1=nuevaPalabra("Apellido");
 		int edad=nuevaEdad("edad");
 				
 	
 			Persona p =new Persona();
 			p.setNombre(nombre);
-			p.setApellidos(apellido1.concat(" ").concat(apellido2));
+			p.setApellidos(apellido1);
 			p.setEdad(edad);
 			Gson gson = new GsonBuilder().setPrettyPrinting().create();
 			String json = gson.toJson(p);
@@ -51,7 +50,7 @@ public class GsonSample {
 	public static boolean checkLetter(String palabra) {
 		boolean check=false;
 		if (palabra.length()==0) check=false; else
-		if (palabra.matches("[A-z]*"))
+		if (palabra.matches("[A-z\\s]{1,60}")) 
 			check=true;
 		System.out.println(check);
 		return  check;
